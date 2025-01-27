@@ -1,0 +1,285 @@
+// component text search
+.input-group-search{
+    background-color: rgba(0, 0, 0, 0.13);
+    border: none;
+    @include border-rad(5px);
+    .text-search{
+        background-color: rgba(0, 0, 0, 0.13);
+        border: none;
+        color: #FFF;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+.img-prepend{
+    background-color: rgba(0, 0, 0, 0.13);
+    border: none;
+    margin-right: 0;
+    img{
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+}
+.img-append{
+    background-color: rgba(0, 0, 0, 0.13);
+    border: none;
+    margin-left: 1px;
+    img{
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+    }
+}
+// component menu
+.menu{
+    padding-left: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    li{
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        padding: 15px 17px;
+        a{
+            color: #FFF;
+        }
+    }
+    .dropdown-btn{
+        background-color: transparent;
+        border: none;
+        min-width: 8rem;
+        margin: 0;
+        padding: 0;
+        .dropdown-toggle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            &::after{
+                display: none;
+            }
+        }
+        .dropdown-menu{
+            li{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 0;
+                a{
+                    font-weight: 600;
+                    color: #1E232B;  
+                }
+            }
+        }
+    }
+}
+.card-movie{
+    background-color: transparent;
+    position: relative;
+    border:none;
+    .pita-movie{
+        background-color: #1E232B;
+        color: #E5E5E5;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        padding: 8px;
+        width: 48px;
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+    .box-hover{
+        display: none;
+    }
+    &:hover{
+        .box-hover{
+            display: flex;
+            position: absolute;
+            top:0;
+            width: 100%;
+            bottom: 17%;
+            right: 0;
+            background-color: #2B3841;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+// component card
+.img-cover-movie{
+    width: 100%;
+    // height: 293px;
+    object-fit: contain;
+}
+.title-movie{
+    font-family: 'Montserrat', sans-serif;
+    .nama{
+        font-size: 16px;
+        font-weight: 600;
+        color: #E5E5E5;
+    }
+    .tahun{
+        color: #929292;
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+.rate-view{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFF;
+    img{
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+    }
+}
+.category-movie{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFF;
+}
+.btn-link{
+    @include border-rad(32px);
+    background-color: #FF0000;
+    text-align: center;
+    color: #E5E5E5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    width: 107px;
+    padding: 5px 10px ;
+    display: block;
+    font-size: 14px;
+    &:hover{
+        color: #E5E5E5;
+        text-decoration: none;
+    }
+}
+.btn-more{
+    width: 151px;
+    border: none;
+}
+// dropdown
+.dropdown-filter{
+    background: rgba(224, 224, 224, 0.13);
+    width: 100%;
+    .dropdown-toggle{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 25px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        &::after{
+            position: absolute;
+            right: 10px;
+            transform: rotate(0deg);
+        }
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    &.show{
+        .dropdown-toggle{
+            &::after{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .dropdown-menu{
+        background-color:#111419 ;
+        width: 100%;
+        li{
+            font-size: 13px;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            .dropdown-item{
+                color:#FFF;
+                padding: 0.25rem 15px;
+                &:hover{
+                    background-color: #09090a;
+                }
+            }
+        }
+    }
+}
+.item-slider{
+    img{
+        width: 243px !important;
+        height: 364px;
+        object-fit: contain;
+    }
+    .caption-item{
+        background-color:#000 ;
+        font-family: 'Montserrat', sans-serif;
+        padding: 15px 15px;
+        color: #FFF;
+        .rate-caption-slider{
+            font-weight: 700;
+            font-size: 18px;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            img{
+                width: 16px !important;
+                height: 16px;
+                object-fit: contain;
+                margin-right: 5px;
+            }
+        }
+        h3{
+            font-weight: 500;
+            font-size: 28px;
+            a{
+                color: #FFF;
+            }
+        }
+        .category-year{
+            font-weight: 400;
+            font-size: 16px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 12px; 
+        }
+    }
+}
+.carousel-banner{
+    .owl-theme {
+        .owl-dots{
+            margin-top: 30px !important;
+            .owl-dot{
+                span{
+                    width: 12px;
+                    height: 12px;
+                }
+                &:hover{
+                    span{
+                        background:#E74C3C ;
+                    }
+                }
+                &.active{
+                    span{
+                        background:#E74C3C ;
+                        width: 60px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
